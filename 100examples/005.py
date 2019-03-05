@@ -1,17 +1,10 @@
-raw=[]
-for i in range(3):
-    x=int(input('int%d: '%(i)))
-    raw.append(x)
-    
-for i in range(len(raw)):
-    for j in range(i,len(raw)):
-        if raw[i]>raw[j]:
-            raw[i],raw[j]=raw[j],raw[i]
-print(raw)
+# Script based python 3.7
 
-
-raw2=[]
-for i in range(3):
-    x=int(input('int%d: '%(i)))
-    raw2.append(x)
-print(sorted(raw2))
+date = input("Input a date:\n")
+date_s = date.split(' ')
+year = int(date_s[0])
+month = int(date_s[1])
+day = int(date_s[2])
+x = [year,month,day]
+x.sort()
+print(x)
