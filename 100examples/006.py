@@ -1,11 +1,11 @@
-def Fib(n):
-    return 1 if n<=2 else Fib(n-1)+Fib(n-2)
-print(Fib(int(input())))
-    
+# Script based python 3.7
 
-target=int(input())
-res=0
-a,b=1,1
-for i in range(target-1):
-    a,b=b,a+b
-print(a)
+def fib(n):
+    if  n==1 or n==2:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
+
+for i in range(1,8):
+    print(fib(i),end=" ")
+    
