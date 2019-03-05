@@ -1,8 +1,15 @@
-n=0
-while (n+1)**2-n*n<=168:
-    n+=1
+# Script based python 3.7
+import math
 
-for i in range((n+1)**2):
-    if i**0.5==int(i**0.5)and (i+168)**0.5==int((i+168)**0.5):
-        print(i-100)
-    
+def isSquare(n):
+    m = math.floor(math.sqrt(n))
+    if m**2==n:
+        return True
+    else:
+        return False
+k = 0;
+while(True):
+    if isSquare(k+100) and isSquare(k+268):
+        print(k)
+        break
+    k += 1
