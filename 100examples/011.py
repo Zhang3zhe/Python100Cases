@@ -1,12 +1,17 @@
-month=int(input('繁殖几个月？： '))
-month_1=1
-month_2=0
-month_3=0
-month_elder=0
-for i in range(month):
-    month_1,month_2,month_3,month_elder=month_elder+month_3,month_1,month_2,month_elder+month_3
-    print('第%d个月共'%(i+1),month_1+month_2+month_3+month_elder,'对兔子')
-    print('其中1月兔：',month_1)
-    print('其中2月兔：',month_2)
-    print('其中3月兔：',month_3)
-    print('其中成年兔：',month_elder)
+# Script based python 3.7
+
+def rabbitNumber(month):
+    list = [1,0,0,0]
+    for i in range(month):
+        x = list[0]
+        y = list[1]
+        z = list[2]
+        w = list[3]
+        list[0] = z + w
+        list[1] = x
+        list[2] = y
+        list[3] = z + w
+    return list[0] + list[1] + list[2] + list[3]
+
+month = int(input('Please input month:'))
+print(rabbitNumber(month))
